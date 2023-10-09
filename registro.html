@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="public/css/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm bg-light fixed-top">
+        <div class="container">
+            <div class="">
+                <a class="navbar-brand" href="#">
+                  <img class="logo-navetec" src="public/img/content/logo.png" alt="">
+                </a>
+                <span class="navbar-text futura_medium fs_22">Customer Service</span>
+            </div>
+            <div class="">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <a class="nav-link futura_medium text-blue-900"  href="#">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link futura_medium text-blue-900"  href="#">Registro</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link futura_medium text-blue-900"  href="#">Preguntas Frecuentes</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link futura_medium text-blue-900"  href="#">Testimonios</a>
+                      </li>
+                    </ul>
+                  </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="">
+        <div id="hero" class="hero">
+            <div class="bg-gradient-blue">
+                <div class="container h100">
+                    <div class="row h100 align-items-start align-items-lg-center justify-content-between">
+                        <div class="col-12 col-xl-6 p-0 margintop6rem">
+                            <h1 class="text-white px-3 pt-4 text-shadow">The greatest landing page on market.
+                            </h1>
+                            <p class="text-white futura_book fs_24 pt-2 px-3">We have over 15 year exprience in business consultting arena. 
+                                We have over 15 year exprience in business consultting arena and artficial intelligence.</span></p>
+                        </div>
+                        <div class="col-5 col-xl-5 d-flex align-items-end h-100">
+                                <div class="">
+                                    <img class="w-75" src="public/img/content/photo-1-1.png" alt="">
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+<div class="bg-gray-50 py-5">
+    <div class="container ">
+        <h2 class=" text-blue-900 pt-4 text-center">Aun no tienes cuenta Registrate Ahora</h2>
+        <div class="row">
+          <div class="col-lg-6 col-xl-6 mx-auto">
+            <div class="card flex-row my-5 border-0 shadow rounded-3 overflow-hidden">
+
+              <div class="card-body p-4 p-sm-5">
+                <form action="controller/registrar.php" method="post">
+    
+                  <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Nombre" required="" autofocus="">
+                    <label for="usuario">Nombre</label>
+                  </div>
+    
+                  <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Nombre" required="" autofocus="">
+                    <label for="apellido">Apellido</label>
+                  </div>
+    
+                  <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="correo" name="correo" placeholder="name@example.com">
+                    <label for="correo">Correo</label>
+                  </div>
+    
+                  <hr>
+    
+                  <div class="form-floating mb-3">
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+                    <label for="password">Password</label>
+                  </div>
+    
+                  <div class="d-grid mb-2">
+                    <button class="btn btn-primary btn-login fw-bold text-uppercase" type="submit">Registrar</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-between">
+            <div class="col-3">
+                <div class="d-flex">
+                    <div class="contend-beneficicios">
+                        <div class="bg-blue-900 rounded-circle d-flex justify-content-center">
+                            <img class="icon-beneficions" src="public/img/content/icon-1.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="ps-3">
+                        <span class="futura_heavy d-block"> Quick Response</span>
+                        <span class="futura_book interlineado-24">There are many variations of passa Ipsum available</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="d-flex">
+                    <div class="contend-beneficicios">
+                        <div class="bg-blue-900 rounded-circle d-flex justify-content-center">
+                            <img class="icon-beneficions" src="public/img/content/icon-2.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="ps-3">
+                        <span class="futura_heavy d-block"> Quick Response</span>
+                        <span class="futura_book interlineado-24">There are many variations of passa Ipsum available</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="d-flex">
+                    <div class="contend-beneficicios">
+                        <div class="bg-blue-900 rounded-circle d-flex justify-content-center">
+                            <img class="icon-beneficions" src="public/img/content/icon-3.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="ps-3">
+                        <span class="futura_heavy d-block"> Quick Response</span>
+                        <span class="futura_book interlineado-24">There are many variations of passa Ipsum available</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <img class="w-100 rounded-2" src="public/img/content/nave1.jpg" alt="">
+            </div>
+            <div class="col-6 pt-3">
+                <span class="futura_demi text-blue-50">¿Quienes Somos?</span>
+                <h2 class="futura_medium text-blue-900">The greatest landing page on market.</h2>
+                <p class="py-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. A cras semper auctor neque vitae.Maecenas ultricies mi eget mauris pharetra et. Sodales ut etiam sit amet nisl purus in mollis nunc.</p>
+                <p class="py-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. A cras semper auctor neque vitae.Maecenas ultricies mi eget mauris pharetra et. Sodales ut etiam sit amet nisl purus in mollis nunc.</p>
+                <div class="row">
+                    <div class="col-4 justify-content-center">
+                        <div class="d-flex flex-column align-content-center">
+                            <span class="fs_46 futura_demi text-center text-blue-900">2.5k</span>
+                            <span class="futura_book text-blue-900 text-center">clietes Atendidos </span>
+                        </div>
+                    </div>
+                    <div class="col-4 justify-content-center">
+                        <div class="d-flex flex-column align-content-center">
+                            <span class="fs_46 futura_demi text-center text-blue-900">2.5k</span>
+                            <span class="futura_book text-blue-900 text-center">clietes Atendidos </span>
+                        </div>
+                    </div>
+                    <div class="col-4 justify-content-center">
+                        <div class="d-flex flex-column align-content-center">
+                            <span class="fs_46 futura_demi text-center text-blue-900">2.5k</span>
+                            <span class="futura_book text-blue-900 text-center">clietes Atendidos </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+<div class="bg-gradient-blue__50">
+    <div class="container">
+        <div class="row justify-content-evenly">
+            <div class="col-6 d-flex flex-column justify-content-center ">
+                <h2 class=" text-white pt-4">Aun no tienes cuenta Registrate Ahora</h2>
+                <p class="futura_book text-white">Mi quis hendrerit dolor magna eget est lorem ipsum dolor. Venenatis a condimentum vitae sapien pellentesque. Quis vel eros donec ac odio tempor orci dapibus ultrices. Nisl nisi scelerisque eu ultrices vitae auctor eu augue.</p>
+            </div>
+            <div class="col-3">
+                <img class="w-100" src="public/img/content/photo-2-2.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bg-gray-50 py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+
+            </div>
+            <div class="col-6 d-flex justify-content-center align-items-center flex-column ">
+                <span class="futura_demi text-blue-50 text-center">¿Quienes Somos?</span>
+                <h2 class="futura_medium text-blue-900 text-center">The greatest landing page on market.</h2>
+                <img class="py-3" src="public/img/content/bx-message-dots.svg" alt="" style="width: 2rem;">
+                <p class="futura_book text-blue-900 text-center">
+                    At Trident, we utilize a multi-faceted approach to source candidates. We leverage our extensive network, industry connections, and online job platforms. Additionally, we employ targeted advertising, conduct thorough database searches, and actively recruit passive candidates to ensure we find the best fit for your job openings.
+                </p>
+                <img class="rounded-circle mt-5 mb-2" src="public/img/photo-92-3.jpg" alt="" style="width: 75px; height: 75px;">
+                <span class="futura_demi text-blue-50 text-center d-block">Emily Cancerbero</span>
+                <span class="futura_book  text-center ">Cliente Navetec</span>
+            </div>
+            <div class="col-3"></div>
+        </div>
+        <div class="row py-5">
+            <div class="col-6 d-flex flex-column justify-content-center">
+                <span class="futura_demi text-blue-50 text-center">Preguntas Frecuentes</span>
+                <h2 class="futura_medium text-blue-900 text-center py-3">The greatest landing page on market.</h2>
+                <div class="accordion bg-transparent border-0" id="accordionExample">
+                    <div class="accordion-item bg-transparent">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button class="text-blue-50 futura_medium accordion-button bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          Accordion Item #1
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item bg-transparent">
+                      <h2 class="accordion-header" id="headingTwo">
+                        <button class="text-blue-50 futura_medium accordion-button collapsed bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          Accordion Item #2
+                        </button>
+                      </h2>
+                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item bg-transparent">
+                      <h2 class="accordion-header" id="headingThree">
+                        <button class="text-blue-50 futura_medium accordion-button collapsed bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                          Accordion Item #3
+                        </button>
+                      </h2>
+                      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-6">
+                <img class="rounded-3 w-100" src="public/img/content/nave1.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <img class="w-100 rounded-3" src="public/img/content/lp_pbb_mirador.png" alt="">
+            </div>
+            <div class="col-6">
+                <span class="futura_demi text-blue-50 text-center">¿Quienes Somos?</span>
+                <h2 class="futura_medium text-blue-900 text-center">The greatest landing page on market.</h2>
+                <div class="row justify-content-between ">
+                    <div class="col-6">
+                        <div class="d-flex mt-2">
+                            <div class="contend-soporte">
+                                <div class="bg-blue-900 rounded-circle d-flex justify-content-center">
+                                    <img class="icon-soporte" src="public/img/content/icon-1.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="ps-3">
+                                <span class="futura_heavy d-block"> Quick Response</span>
+                                <span class="futura_book interlineado-24">There are many variations</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="d-flex mt-3">
+                            <div class="contend-soporte">
+                                <div class="bg-blue-900 rounded-circle d-flex justify-content-center">
+                                    <img class="icon-soporte" src="public/img/content/icon-2.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="ps-3">
+                                <span class="futura_heavy d-block"> Quick Response</span>
+                                <span class="futura_book interlineado-24">There are many variations</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="d-flex mt-3">
+                            <div class="contend-soporte">
+                                <div class="bg-blue-900 rounded-circle d-flex justify-content-center">
+                                    <img class="icon-soporte" src="public/img/content/icon-3.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="ps-3">
+                                <span class="futura_heavy d-block"> Quick Response</span>
+                                <span class="futura_book interlineado-24">There are many variations</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="d-flex mt-3">
+                            <div class="contend-soporte">
+                                <div class="bg-blue-900 rounded-circle d-flex justify-content-center">
+                                    <img class="icon-soporte" src="public/img/content/icon-3.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="ps-3">
+                                <span class="futura_heavy d-block"> Quick Response</span>
+                                <span class="futura_book interlineado-24">There are many variations</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="bg-gradient-blue__50 py-3">
+    <div class="container">
+        <div class="row py-5">
+            <div class="col-3">
+                <h6 class="text-white"> Oficinas CDMX</h6>
+                <ul class="text-white" style="list-style: none;">
+                    <li>Calle Hegel 153</li>
+                    <li>Polanco. C.P. 11560</li>
+                    <li>Ciudad de México. CDMX</li>
+                </ul>
+                <div class="">
+                    <img src="public/img/content/telefono.svg" alt="" width="1rem">
+                    <span class="text-white">446 150 2318</span>
+                </div>
+            </div>
+            <div class="col-3">
+                <h6 class="text-white"> Oficinas Queretaro</h6>
+                <ul class="text-white" style="list-style: none;">
+                    <li>Calle Hegel 153</li>
+                    <li>Polanco. C.P. 11560</li>
+                    <li>Ciudad de México. CDMX</li>
+                </ul>
+                <div class="">
+                    <img src="public/img/content/telefono.svg" alt="" width="1rem">
+                    <span class="text-white">446 150 2318</span>
+                </div>
+            </div>
+            <div class="col-6"></div>
+
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

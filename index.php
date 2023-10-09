@@ -31,7 +31,7 @@
     <div class="page-center">
         <div class="page-center-in">
             <div class="container-fluid">
-
+//comentario editar
             
                 <form class="sign-box" action="" method="post" id="login_form">
 

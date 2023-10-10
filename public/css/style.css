@@ -419,6 +419,13 @@ p{
     background-position: center center;
     height: 35rem;
 }
+.bg__login{
+    background-image: url(../img/content/portada_login.jpg);
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+}
+
 
 
 /* formulario */
@@ -633,14 +640,6 @@ p{
     transition: ease 1s;
 }
 
-
-.contador{
- 
-}
-
-.contador_cantidad{
-}
-
 @keyframes aparecer{
     0%{
         opacity: 0;
@@ -684,4 +683,12 @@ p{
 
 .accordion-item{
     border: 0;
+}
+.login__icons img{
+    width: 100px;
+    transition: all .2s ease-in;
+}
+
+.login__icons img:hover{
+    transform: scale(1.2);
 }

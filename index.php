@@ -1,126 +1,117 @@
-<?php
-    require_once("config/conexion.php");
-    if(isset($_POST["enviar"]) and $_POST["enviar"]=="si"){
-        require_once("models/Usuario.php");
-        $usuario = new Usuario();
-        $usuario->login();
-    }
-?>
-<!DOCTYPE html>
-<html>
-<head lang="es">
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<title>Acceso</title>
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="public/img/content/logo.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="public/css/style.css">
+    <title>Login - Clientes</title>
+  </head>
 
-	<link href="img/favicon.144x144.png" rel="apple-touch-icon" type="image/png" sizes="144x144">
-	<link href="img/favicon.114x114.png" rel="apple-touch-icon" type="image/png" sizes="114x114">
-	<link href="img/favicon.72x72.png" rel="apple-touch-icon" type="image/png" sizes="72x72">
-	<link href="img/favicon.57x57.png" rel="apple-touch-icon" type="image/png">
-	<link href="img/favicon.png" rel="icon" type="image/png">
-	<link href="img/favicon.ico" rel="shortcut icon">
+  <body>
+    <nav class="navbar navbar-expand-sm bg-light fixed-top">
+      <div class="container">
+          <div class="">
+              <a class="navbar-brand" href="#">
+                <img class="logo-navetec" src="public/img/content/logo.png" alt="">
+              </a>
+              <span class="navbar-text futura_medium fs_22 text-blue-900">Customer Service</span>
+          </div>
+          <div class="">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link futura_medium text-blue-900 fs_19"  href="registro.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link futura_medium text-blue-900 fs_19"  href="#">Login</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link futura_medium text-blue-900 fs_19"  href="#testimoniales">Testimonios</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link futura_medium text-blue-900 fs_19"  href="#preguntas">Preguntas Frecuentes</a>
+                    </li>
+                   
+                  </ul>
+                </div>
+          </div>
+      </div>
+  </nav>
 
-
-    <link rel="stylesheet" href="public/css/separate/pages/login.min.css">
-    <link rel="stylesheet" href="public/css/lib/font-awesome/font-awesome.min.css">
-    <link rel="stylesheet" href="public/css/lib/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="public/css/main.css">
-</head>
-<body>
-    <div class="page-center">
-        <div class="page-center-in">
-            <div class="container-fluid">
-//comentario editar
-            
-                <form class="sign-box" action="" method="post" id="login_form">
-
-                <input type="hidden" id="rol_id" name="rol_id" value="1">
-                
-                    <div class="sign-avatar">
-                        <img src="public/img/avatar-sign.png" alt="">
-                    </div>
-                    <header class="sign-title" id="lbltitulo">Acceso Usuario</header>
-                    
-                    <?php
-                    if(isset($_GET["m"])){
-                        switch($_GET["m"]){
-                            case "1";
-                                ?>
-                                    <div class="alert alert-danger" role"alert>
-                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close" >
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                        <div class="d-fex align-items-center justify-content-start">
-                                            <i class="icon ion.ios.checkmark alert-icon tx-32 mg-t-5 mg-xs-t-0"></i>
-                                            <span>El usuario y/o contraseña con incorrectos. </span>
-                                        </div>
-                                    </div>
-                                <?php
-                            break;
-
-                            case "2";
-                                ?>
-                                        <div class="alert alert-danger" role"alert>
-                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close" >
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
-                                            <div class="d-fex align-items-center justify-content-start">
-                                                <i class="icon ion.ios.checkmark alert-icon tx-32 mg-t-5 mg-xs-t-0"></i>
-                                                <span>Los campos estan vacios. </span>
-                                            </div>
-                                        </div>
-                                    <?php
-                            break;
-                        }
-                    }
-                    ?>
-
-                    <div class="form-group">
-                        <input type="text" id="usu_correo" name="usu_correo" class="form-control" placeholder="E-Mail"/>
-                    </div>
-                    <div class="form-group">
-                        <input type="password" id="usu_pass" name="usu_pass" class="form-control" placeholder="Password"/>
-                    </div>
-                    <div class="form-group">
-                    <div class="float-left reset">
-                            <a href="#" id="btnsoporte">Acceso Soporte</a>
+  <header class="">
+      <div id="hero" class="bg__login">
+          <div class="bg-gradient-blue">
+              <div class="container h100">
+                <div class="row h-100">
+                  <div class="col-3 login__icons">
+                      <div class="row h-100">
+                          <div class="col-6 d-flex flex-column justify-content-around h-100">
+                              <img src="public/img/content/capital-ccima_w.svg" alt="">
+                              <img src="public/img/content/construye_w.svg" alt="">
+                          </div>
+                          <div class="col-6 d-flex flex-column justify-content-center h-100" >
+                              <img src="public/img/content/capital-ccima_w.svg" alt="">
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-6 d-flex justify-content-center flex-column">
+                    <div class="card mx-5">
+                      <div class="card-body">
+                        <h3 class="login-heading mt-3 mb-5 text-center">Bienvenido de Regreso</h3>
+      
+                    <!-- Sign In Form -->
+                    <form action="loguear.php" method="POST">
+                      <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="correo" name ="correo" placeholder="name@example.com">
+                        <label for="correo">Correo</label>
+                      </div>
+                      <div class="form-floating mb-3">
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+                        <label for="password">Contraseña</label>
+                      </div>
+      
+                      <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" value="" id="rememberPasswordCheck">
+                        <label class="form-check-label" for="rememberPasswordCheck">
+                          Remember password
+                        </label>
+                      </div>
+      
+                      <div class="d-grid">
+                        <button class="btn btn-primary btn-login text-uppercase fw-bold mb-2" type="submit">Iniciar Sesión</button>
+                        <div class="text-center">
+                          <a class="small" href="#">Olvidaste tu Contraseña?</a>
                         </div>
-                        <div class="float-right reset">
-                            <a href="reset-password.php">Cambiar contraseña</a>
-                        </div>
+                      </div>
+      
+                    </form>
+                      </div>
                     </div>
-                    <input type="hidden" name="enviar" class="form-control" value="si">
-                    <button type="submit" class="btn btn-rounded">Acceder</button>
-                </form>
-            </div>
-        </div>
-    </div>
+                  </div>
+                  <div class="col-3 login__icons">
+                      <div class="row h-100">
+                          <div class="col-6 d-flex flex-column justify-content-center h-100">
+                              <img src="public/img/content/capital-ccima_w.svg" alt="">
+                          </div>
+                          <div class="col-6 d-flex flex-column justify-content-around h-100" >
+                              <img src="public/img/content/capital-ccima_w.svg" alt="">
+                              <img src="public/img/content/Porttoblanco_w.svg " alt="">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              </div>
+          </div>
+      </div>
+  </header>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-<script src="public/js/lib/jquery/jquery.min.js"></script>
-<script src="public/js/lib/tether/tether.min.js"></script>
-<script src="public/js/lib/bootstrap/bootstrap.min.js"></script>
-<script src="public/js/plugins.js"></script>
-    <script type="text/javascript" src="public/js/lib/match-height/jquery.matchHeight.min.js"></script>
-    <script>
-        $(function() {
-            $('.page-center').matchHeight({
-                target: $('html')
-            });
-
-            $(window).resize(function(){
-                setTimeout(function(){
-                    $('.page-center').matchHeight({ remove: true });
-                    $('.page-center').matchHeight({
-                        target: $('html')
-                    });
-                },100);
-            });
-        });
-    </script>
-<script src="public/js/app.js"></script>
-
-<script type="text/javascript" src="index.js"></script>
-</body>
+   
+  </body>
 </html>

@@ -1,77 +1,474 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="public/img/content/logo.ico">
+    <title>Atención a Cliente</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="public/css/style.css">
+</head>
 
-    <title>Hello, world!</title>
-  </head>
-  <body>
-  
-    <div class="container">
-        <div class="row">
-          <div class="col-lg-10 col-xl-9 mx-auto">
-            <div class="card flex-row my-5 border-0 shadow rounded-3 overflow-hidden">
-              <div class="card-img-left d-none d-md-flex">
-                <!-- Background image for card set in CSS! -->
-              </div>
-              <div class="card-body p-4 p-sm-5">
-                <h5 class="card-title text-center mb-5 fw-light fs-5">Register</h5>
-                <form action="registro_clientes.php" method="POST">
-    
-                  <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="username" name="username" placeholder="myusername" required autofocus>
-                    <label for="username">Username</label>
-                  </div>
-                  <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="apellido" name="apellido" placeholder="myusername" required autofocus>
-                    <label for="apellido">apellido</label>
-                  </div>
-                  <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="correo" name="correo" placeholder="myusername" required autofocus>
-                    <label for="correo">correo</label>
-                  </div>
-                  
-                  <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="telefono" name="telefono" placeholder="myusername" required autofocus>
-                    <label for="telefono">telefono</label>
-                  </div>
-                  
-                  <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="desarrollo" name="desarrollo" placeholder="myusername" required autofocus>
-                    <label for="desarrollo">desarrollo</label>
-                  </div>
-                  
-                  <div class="form-floating mb-3">
-                    <input type="password" class="form-control" id="password" name="password" placeholder="Password">
-                    <label for="password">Password</label>
-                  </div>
-
-                  <div class="d-grid mb-2">
-                    <button class="btn btn-lg btn-primary btn-login fw-bold text-uppercase" type="submit">Register</button>
-                  </div>
-    
-                  <a class="d-block text-center mt-2 small" href="#">Have an account? Sign In</a>
-
-                </form>
-              </div>
+<body>
+    <nav class="navbar navbar-expand-sm bg-light fixed-top">
+        <div class="container">
+            <div class="">
+                <a class="navbar-brand" href="#">
+                    <img class="logo-navetec" src="public/img/content/logo.png" alt="">
+                </a>
+                <span class="navbar-text futura_medium fs_22 text-blue-900">Customer Service</span>
             </div>
-          </div>
+            <div class="">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link futura_medium text-blue-900 fs_19" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link futura_medium text-blue-900 fs_19" href="login.html">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link futura_medium text-blue-900 fs_19" href="#testimoniales">Testimonios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link futura_medium text-blue-900 fs_19" href="#preguntas">Preguntas
+                                Frecuentes</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
         </div>
-      </div>
-    <!-- Optional JavaScript; choose one of the two! -->
+    </nav>
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <header class="">
+        <div id="hero" class="hero">
+            <div class="bg-gradient-blue">
+                <div class="container h100">
+                    <div class="row h100 align-items-start align-items-lg-center justify-content-between">
+                        <div class="col-12 col-xl-6 p-0 margintop6rem">
+                            <h1 class="text-white px-3 pt-4 text-shadow"> ¿Necesitas ayuda? Estamos listos para apoyarte
+                            </h1>
+                            <p class="text-white futura_book fs_24 pt-4 px-3">Bienvenido a nuestra plataforma de soporte
+                                al cliente, diseñada especialmente para brindarte la asistencia que necesitas en
+                                cualquier momento.</p>
+                            <!-- <p class="text-white futura_book fs_24 pt-4 px-3">Nuestro equipo está comprometido en
+                                proporcionar respuestas claras y soluciones a la medida de tus necesidades. Nos
+                                enorgullecemos de ser tus<b>Aliados Sherpa</b>  y ofrecer un servicio que combina amabilidad y
+                                profesionalismo para asegurarnos de que te sientas en confianza al utilizar nuestra
+                                plataforma.
+                            </p> -->
+                        </div>
+                        <div class="col-5 col-xl-5 d-flex align-items-end h-100">
+                            <div class="">
+                                <img class="w-75" src="public/img/content/photo-1-1.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="bg-gray-50 py-4">
+        <div class="container ">
+            <h2 class=" text-blue-900 text-center">¿Ya tienes cuenta? Regístrate aquí</h2>
+            <div class="row">
+                <div class="col-lg-6 col-xl-6 mx-auto">
+                    <div class="card flex-row my-5 border-0 shadow rounded-3 overflow-hidden">
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-    -->
-  </body>
+                        <div class="card-body p-4 p-sm-5">
+                            <form action="controller/registrar.php" method="post">
+
+                                <h3 class="futura_book text-blue-900 mb-5 text-center"> Registro</h3>
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="usuario" name="usuario"
+                                        placeholder="Nombre" required="">
+                                    <label for="usuario">Nombre</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="apellido" name="apellido"
+                                        placeholder="Nombre" required="">
+                                    <label for="apellido">Apellido</label>
+                                </div>
+
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="correo" name="correo"
+                                        placeholder="name@example.com">
+                                    <label for="correo">Correo</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="password" class="form-control" id="password" name="password"
+                                        placeholder="Password">
+                                    <label for="password">Password</label>
+                                </div>
+
+                                <div class="d-grid mb-2">
+                                    <button class="btn btn-primary btn-login fw-bold text-uppercase"
+                                        type="submit">Registrar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-between">
+                <div class="col-4">
+                    <div class="d-flex">
+                        <div class="contend-beneficicios">
+                            <div class="bg-blue-900 rounded-circle d-flex justify-content-center">
+                                <img class="icon-beneficions" src="public/img/content/icon-1.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="ps-3">
+                            <span class="futura_heavy d-block">1. Registro y Consulta:</span>
+                            <span class="futura_book interlineado-24">Regístrate y describe tu situación para recibir asistencia personalizada</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="d-flex">
+                        <div class="contend-beneficicios">
+                            <div class="bg-blue-900 rounded-circle d-flex justify-content-center">
+                                <img class="icon-beneficions" src="public/img/content/icon-2.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="ps-3">
+                            <span class="fs_6 futura_heavy d-block"> 2. Contacto de un Aliado
+                            </span>
+                            <span class="futura_book interlineado-24">Uno de nuestros  Aliados Sherpa  se comunicará contigo para brindar apoyo</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="d-flex">
+                        <div class="contend-beneficicios">
+                            <div class="bg-blue-900 rounded-circle d-flex justify-content-center">
+                                <img class="icon-beneficions" src="public/img/content/icon-3.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="ps-3">
+                            <span class="futura_heavy d-block">3. Seguimiento Personalizado</span>
+                            <span class="futura_book interlineado-24">Mantén el contacto a través de correo o chat para resolver tu situación de manera efectiva</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <img class="w-100 rounded-2" src="public/img/content/photo-3 1.jpg" alt="">
+                </div>
+                <div class="col-6 pt-3">
+                    <!-- <span class="futura_demi text-blue-50"></span> -->
+                    <h2 class="futura_medium text-blue-900">¿Quiénes Somos? </h2>
+                    <p class="py-2">GRUPO CCIMA es un consorcio de empresas 100% mexicanas con más de 20 años de experiencia en el mercado del ramo de la construcción </p>
+                    <p class="py-2">Enfocándose en el desarrollo de proyectos comerciales, mixtos al igual que en el sector inmobiliario en las regiones del Bajío, cuenta con un modelo de negocios de economía circular donde cada una de sus unidades se entrelazan y dan soporte unas a otras teniendo como resultado una economía de escala</p>
+                    <div class="row">
+                        <div class="col-4 justify-content-center">
+                            <div class="d-flex flex-column align-content-center">
+                                <span class="fs_46 futura_demi text-center text-blue-900">+2.5k</span>
+                                <span class="futura_book text-blue-900 text-center">clietes Atendidos </span>
+                            </div>
+                        </div>
+                        <div class="col-4 justify-content-center">
+                            <div class="d-flex flex-column align-content-center">
+                                <span class="fs_46 futura_demi text-center text-blue-900">+18k</span>
+                                <span class="futura_book text-blue-900 text-center">Tickets Resueltos</span>
+                            </div>
+                        </div>
+                        <div class="col-4 justify-content-center">
+                            <div class="d-flex flex-column align-content-center">
+                                <span class="fs_46 futura_demi text-center text-blue-900">+ 21</span>
+                                <span class="futura_book text-blue-900 text-center">Años de Experiencia </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="bg-gradient-blue__50">
+        <div class="container">
+            <div class="row justify-content-evenly">
+                <div class="col-6 d-flex flex-column justify-content-center ">
+                    <h2 class=" text-white pt-4">¿Ya tienes cuenta? Regístrate aquí</h2>
+                    <p class="futura_book text-white mt-3">Conoce nuestro exclusivo Programa de Referidos, diseñado para premiar tu confianza en nosotros. Al recomendar a alguien de confianza para adquirir nuestros desarrollos o naves , ambos obtendrán beneficios excepcionales.
+                     </p>
+                </div>
+                <div class="col-3">
+                    <img class="w-100" src="public/img/content/photo-2-2.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="testimoniales" class="bg-gray-50 py-5">
+        <div class="container">
+            <div class="row h-100">
+                <div class="col-3 ">
+                    <div class="row h-100">
+                        <div class="col-6 d-flex flex-column justify-content-between h-100">
+                            <img style="width: 75px;" src="public/img/content/avatar_01.png" alt="">
+                            <img style="width: 75px;" src="public/img/content/avatar_02.png" alt="">
+                        </div>
+                        <div class="col-6 d-flex flex-column justify-content-center h-100">
+                            <img style="width: 75px;" src="public/img/content/avatar_03.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 d-flex justify-content-center align-items-center flex-column ">
+                    <span class="futura_demi text-blue-50 text-center">Testimonios</span>
+                    <h2 class="futura_medium text-blue-900 text-center">The greatest landing page on market.</h2>
+                    <img class="py-3" src="public/img/content/bx-message-dots.svg" alt="" style="width: 2rem;">
+                    <p class="futura_book text-blue-900 text-center">
+                        At Trident, we utilize a multi-faceted approach to source candidates. We leverage our extensive
+                        network, industry connections, and online job platforms. Additionally, we employ targeted
+                        advertising, conduct thorough database searches, and actively recruit passive candidates to
+                        ensure we find the best fit for your job openings.
+                    </p>
+                    <img class="rounded-circle mt-5 mb-2" src="public/img/photo-92-3.jpg" alt=""
+                        style="width: 75px; height: 75px;">
+                    <span class="futura_demi text-blue-50 text-center d-block">Emily Cancerbero</span>
+                    <span class="futura_book  text-center ">Cliente Navetec</span>
+                </div>
+                <div class="col-3 ">
+                    <div class="row h-100">
+                        <div class="col-6 d-flex flex-column justify-content-center h-100">
+                            <img style="width: 75px;" src="public/img/content/avatar_04.png" alt="">
+                        </div>
+                        <div class="col-6 d-flex flex-column justify-content-between h-100">
+                            <img style="width: 75px;" src="public/img/content/avatar_05.png" alt="">
+                            <img style="width: 75px;" src="public/img/content/avatar_06.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="preguntas" class="row mt-5 py-5">
+                <div class="col-6 d-flex flex-column justify-content-center">
+                    <span class="futura_demi text-blue-50 text-center">Preguntas Frecuentes</span>
+                    <h2 class="futura_medium text-blue-900 text-center py-3">The greatest landing page on market.</h2>
+                    <div class="accordion bg-transparent border-0" id="accordionExample">
+                        <div class="accordion-item bg-transparent">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="text-blue-50 futura_medium accordion-button bg-transparent" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                                    aria-controls="collapseOne">
+                                    Accordion Item #1
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong>This is the first item's accordion body.</strong> It is shown by default,
+                                    until the collapse plugin adds the appropriate classes that we use to style each
+                                    element. These classes control the overall appearance, as well as the showing and
+                                    hiding via CSS transitions. You can modify any of this with custom CSS or overriding
+                                    our default variables. It's also worth noting that just about any HTML can go within
+                                    the <code>.accordion-body</code>, though the transition does limit overflow.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-transparent">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="text-blue-50 futura_medium accordion-button collapsed bg-transparent"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                    aria-expanded="false" aria-controls="collapseTwo">
+                                    Accordion Item #2
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong>This is the second item's accordion body.</strong> It is hidden by default,
+                                    until the collapse plugin adds the appropriate classes that we use to style each
+                                    element. These classes control the overall appearance, as well as the showing and
+                                    hiding via CSS transitions. You can modify any of this with custom CSS or overriding
+                                    our default variables. It's also worth noting that just about any HTML can go within
+                                    the <code>.accordion-body</code>, though the transition does limit overflow.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item bg-transparent">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="text-blue-50 futura_medium accordion-button collapsed bg-transparent"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                    aria-expanded="false" aria-controls="collapseThree">
+                                    Accordion Item #3
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong>This is the third item's accordion body.</strong> It is hidden by default,
+                                    until the collapse plugin adds the appropriate classes that we use to style each
+                                    element. These classes control the overall appearance, as well as the showing and
+                                    hiding via CSS transitions. You can modify any of this with custom CSS or overriding
+                                    our default variables. It's also worth noting that just about any HTML can go within
+                                    the <code>.accordion-body</code>, though the transition does limit overflow.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <img class="rounded-3 w-100" src="public/img/content/nave1.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <img class="w-100 rounded-3" src="public/img/content/lp_pbb_mirador_1.jpg" alt="">
+                </div>
+                <div class="col-6 pt-3">
+                    <span class="futura_demi text-blue-50">¿Quieres Invertir?</span>
+                    <h2 class="futura_medium text-blue-900 ">Portto Blanco Bernal </h2>
+                    <p class="futura_book text-blue-900 py-2">
+                        At Trident, we utilize a multi-faceted approach to source candidates. We leverage our extensive
+                        network,
+                    </p>
+                    <div class="row justify-content-between">
+                        <div class="col-6">
+                            <div class="d-flex mt-3">
+                                <div class="contend-soporte">
+                                    <div class="bg-blue-900 rounded-circle d-flex justify-content-center">
+                                        <img class="icon-soporte" src="public/img/content/icon-1.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="ps-3">
+                                    <span class="futura_heavy d-block"> Quick Response</span>
+                                    <span class="futura_book interlineado-24">There are many variations</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex mt-3">
+                                <div class="contend-soporte">
+                                    <div class="bg-blue-900 rounded-circle d-flex justify-content-center">
+                                        <img class="icon-soporte" src="public/img/content/icon-2.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="ps-3">
+                                    <span class="futura_heavy d-block"> Quick Response</span>
+                                    <span class="futura_book interlineado-24">There are many variations</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex mt-3">
+                                <div class="contend-soporte">
+                                    <div class="bg-blue-900 rounded-circle d-flex justify-content-center">
+                                        <img class="icon-soporte" src="public/img/content/icon-3.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="ps-3">
+                                    <span class="futura_heavy d-block"> Quick Response</span>
+                                    <span class="futura_book interlineado-24">There are many variations</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex mt-3">
+                                <div class="contend-soporte">
+                                    <div class="bg-blue-900 rounded-circle d-flex justify-content-center">
+                                        <img class="icon-soporte" src="public/img/content/icon-3.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="ps-3">
+                                    <span class="futura_heavy d-block"> Quick Response</span>
+                                    <span class="futura_book interlineado-24">There are many variations</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <footer>
+        <div class="bg-gradient-blue__50 py-3">
+            <div class="container">
+                <div class="row py-5">
+                    <div id="direcciones" class="col-3">
+                        <h6 class="text-white"> Oficinas CDMX</h6>
+                        <ul class="text-white ps-1" style="list-style: none;">
+                            <li>Calle Hegel 153</li>
+                            <li>Polanco. C.P. 11560</li>
+                            <li>Ciudad de México. CDMX</li>
+                        </ul>
+                        <div class="">
+                            <a href="tel:+5588547949" style="text-decoration: none;">
+                                <img src="public/img/content/phone.svg" alt="" style="width: 1rem;">
+                                <span class="text-white">55 8854 7949</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <h6 class="text-white"> Oficinas Querétaro</h6>
+                        <ul class="text-white ps-1" style="list-style: none;">
+                            <li>Blvd. Bernardo Quintana 88</li>
+                            <li>Carretas. C.P. 76050</li>
+                            <li>Santiago de Querétaro, Qro.</li>
+                        </ul>
+                        <div class="">
+                            <a href="tel:+4422912223" style="text-decoration: none;">
+                                <img src="public/img/content/phone.svg" alt="" style="width: 1rem;">
+                                <span class="text-white">(442) 291 22 23</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-6 d-flex flex-column align-items-end">
+                        <img src="public/img/content/logo_blanco.svg" alt="" style="width: 6rem;">
+                        <div class="d-flex justify-content-end py-3">
+                            <div class="px-1">
+                                <a href="https://www.facebook.com/NavetecByCCIMA    ">
+                                    <img class="w-32" src="public/img/content/facebook.svg" alt=""
+                                        style="width: 1.5rem;">
+                                </a>
+                            </div>
+                            <div class="px-1">
+                                <a href="https://www.instagram.com/navetecbyccima/">
+                                    <img class="w-32" src="public/img/content/instagram.svg" alt=""
+                                        style="width: 1.5rem;">
+                                </a>
+                            </div>
+                            <div class="px-1">
+                                <a href="">
+                                    <img class="w-32" src="public/img/content/linkedin.svg" alt=""
+                                        style="width: 1.5rem;">
+                                </a>
+                            </div>
+                            <div class="px-1">
+                                <a href="https://wa.me/message/74VOGKIVTSDCO1">
+                                    <img class="w-32" src="public/img/content/whatsapp_blanco.svg" alt=""
+                                        style="width: 1.5rem;">
+                                </a>
+                            </div>
+                        </div>
+                        <a class="text-white fs_19" href="https://www.grupoccima.com" target="_blank"
+                            style="text-decoration: none;">grupoccima.com</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+</body>
+
 </html>
